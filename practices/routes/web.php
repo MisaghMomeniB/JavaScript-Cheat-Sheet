@@ -11,3 +11,4 @@ Route::get('/login', function () {
 
 Route::get('/register', [PageConreoller::class, 'register']);
 });
+?>
