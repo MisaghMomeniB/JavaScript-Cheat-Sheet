@@ -8,4 +8,6 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return "LogIn";
 });
+
+Route::get('/register', [PageConreoller::class, 'register']);
 });
