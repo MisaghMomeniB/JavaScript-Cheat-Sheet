@@ -21,4 +21,9 @@ Route::get('/hello', function () {
     return view('hello', ['name' => 'Misagh Momeni Bashusqeh']);
 });
 
+
+Route::get('/adminpage',function() {
+    return view('hello', ['name' => 'Admin']);
+});
+
 require __DIR__.'/auth.php';
