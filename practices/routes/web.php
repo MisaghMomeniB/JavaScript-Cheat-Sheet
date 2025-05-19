@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,6 +10,6 @@ Route::get('/login', function () {
     return "LogIn";
 });
 
-Route::get('/register', [PageConreoller::class, 'register']);
+Route::get('/register', [PageController::class, 'register']);
 });
 ?>
