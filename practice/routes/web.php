@@ -9,6 +9,6 @@ Route::get('/', function () {
 
 Route::get('/login', [PageController::class, 'login']);
 
-Route::get('/register', [PageController::class, 'register'])->middleware('guest', 'throtte:10,1');
+Route::get('/register', [PageController::class, 'register'])->middleware('guest', 'throttle:10,1');
 
 ?>
