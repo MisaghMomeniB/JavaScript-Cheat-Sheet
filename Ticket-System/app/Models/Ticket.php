@@ -8,4 +8,4 @@
    class Ticket extends BaseTicket implements HasMedia
    {
        use InteractsWithMedia;
-   }1
+   }
