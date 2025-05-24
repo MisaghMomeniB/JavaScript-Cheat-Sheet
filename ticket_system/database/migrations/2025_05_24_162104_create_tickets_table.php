@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('subject');
+            $table->text('message');
+            $table->enum('status', ['open', 'closed'])->default('open');
             $table->timestamps();
         });
     }
