@@ -9,6 +9,12 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    public function isAdmin()
+{
+    return $this->is_admin;
+}
+
+
 
     public function tickets() {
     return $this->hasMany(Ticket::class);

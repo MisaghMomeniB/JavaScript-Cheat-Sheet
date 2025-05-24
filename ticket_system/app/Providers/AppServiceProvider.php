@@ -6,6 +6,10 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
+    protected $policies = [
+    \App\Models\Ticket::class => \App\Policies\TicketPolicy::class,
+];
+
     /**
      * Register any application services.
      */
