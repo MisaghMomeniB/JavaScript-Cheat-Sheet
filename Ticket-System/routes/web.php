@@ -7,4 +7,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [PageController::class ('login')]);
+Route::get('/login', [PageController::class, ('login')]);
