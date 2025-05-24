@@ -7,4 +7,3 @@
     <input name="password_confirmation" type="password" placeholder="Confirm Password" required><br>
     <button type="submit">Register</button>
 </form>
-<a href="{{ route('login') }}">Login</a>
