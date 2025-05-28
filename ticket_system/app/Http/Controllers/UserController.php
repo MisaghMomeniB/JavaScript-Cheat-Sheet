@@ -21,7 +21,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        
+        return view('users.create');
     }
 
     /**
@@ -41,7 +41,8 @@ class UserController extends Controller
             'password' => $validated['password'],
         ]);
 
-        return response()->json($user, 201);
+        user::create($validated);
+        return redirect()->route('users.index')->with('success', 'User Created');
     }
 
     /**
@@ -49,7 +50,8 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        return User::findOrFail();
+        $user = User::findOrFail($id);
+        return view('users.index', compact('user'));
     }
 
     /**
@@ -57,7 +59,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('users.index', compact('user'));
     }
 
     /**
@@ -73,13 +76,13 @@ class UserController extends Controller
             'password' => 'sometimes|string|min:6|max:18',
         ]);
 
-        if(isset($validated['password'])) {
-            $user->password = $validated['password'];
+        if($request->filled('password')) {
+            $user->passwoord = $validated['password'];
         }
 
         $user->update($validated);
 
-        return response()->json($user);
+        return redirect()->route('users.index')->with('success', 'information user updated');
     }
 
     /**
@@ -90,6 +93,6 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
 
-        return response()->json(['message' => 'User deleted']);
+        return redirect()->route('users.index')->with('success', 'User Deleted');
     }
 }

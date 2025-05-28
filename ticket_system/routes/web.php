@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -9,8 +9,8 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/register', [AuthController::class, 'register'])->name('register');
-    Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
-    Route::get('/login', [AuthController::class, 'login'])->name('login');
-    Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
+    Route::get('/register', [UserController::class, 'register'])->name('register');
+    Route::post('/register', [UserController::class, 'registerPost'])->name('register');
+    Route::get('/login', [UserController::class, 'login'])->name('login');
+    Route::post('/login', [UserController::class, 'loginPost'])->name('login');
 });
