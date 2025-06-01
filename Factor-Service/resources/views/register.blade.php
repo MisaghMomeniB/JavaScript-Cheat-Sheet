@@ -9,5 +9,8 @@
 </head>
 <body>
         <h1 class="mt-10 text-center text-blue-600" >Register Form</h1>
+
+        <form class="max-w-md mx-auto">
+        
 </body>
 </html>
