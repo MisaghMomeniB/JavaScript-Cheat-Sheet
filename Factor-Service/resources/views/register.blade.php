@@ -8,6 +8,6 @@
     <title>Register</title>
 </head>
 <body>
-    
+        <h1 class="mt-10 text-center text-blue-600" >Register Form</h1>
 </body>
 </html>
