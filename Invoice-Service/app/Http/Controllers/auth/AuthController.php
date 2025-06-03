@@ -16,4 +16,8 @@ class AuthController extends Controller
     public function showRegister() {
         return view('/form.register');
     }
+
+    public function invoice() {
+        return view('invoice.invoice');
+    }
 }

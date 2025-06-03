@@ -18,3 +18,5 @@ Route::get('/register', [AuthController::class, 'showRegister']);
 // });
 
 Route::get('/login', [AuthController::class, 'showLogin']);
+
+Route::get('/create-invoice', [AuthController::class, 'invoice']);
