@@ -9,7 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Login</title>
 </head>
-<body class="font-Vazir" >
+<body dir="rtl" class="font-Vazir" >
     
     <h1 class="mt-10 text-center text-blue-600" >برای ورود به پنل خود اطلاعات مورد نیاز را به درستی وارد کنید</h1>
 
