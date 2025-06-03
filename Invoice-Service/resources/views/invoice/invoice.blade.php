@@ -11,6 +11,7 @@
 <body dir="rtl" class="font-Vazir" >
     <form class="text-Vazir m-10" action="">
         <div>
+            <input type="date" id="date" name="date"><br>
             <label for="fname">فروشگاه</label>
             <input type="text" id="fname" name="fname"><br>
             <label for="lname">دسته بندی</label>
