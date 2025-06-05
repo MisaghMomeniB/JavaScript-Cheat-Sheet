@@ -11,7 +11,7 @@ class InvoiceController extends Controller
 {
 public function index() {
 $invoices = Auth::user()->invoices;
-return view('dashboard', [
+return view('auth.dashboard', [
 'invoices' => $invoices,
 'categories' => Category::all()
 ]);
