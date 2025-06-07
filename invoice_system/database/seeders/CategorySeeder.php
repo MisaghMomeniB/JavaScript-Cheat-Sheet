@@ -14,9 +14,9 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::insert([
-            ['name' => 'دسته 1'],
-            ['name' => 'دسته 2'],
-            ['name' => 'دسته 3'],
+            ['name' => 'فاکتور فروش'],
+            ['name' => 'فاکتور خرید'],
+            ['name' => 'فاکتوری ماهانه / سالانه'],
         ]);
     }
 }
