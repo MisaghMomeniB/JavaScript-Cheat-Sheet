@@ -16,5 +16,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [InvoiceController::class, 'index'])->name('dashboard');
+//    Route::get('/preview', [InvoiceController::class, 'preview'])->name('preview');
     Route::post('/invoices', [InvoiceController::class, 'store'])->name('invoices.store');
 });
