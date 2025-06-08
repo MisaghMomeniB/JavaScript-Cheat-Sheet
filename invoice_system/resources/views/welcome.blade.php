@@ -2,11 +2,12 @@
     <style>
         body {
             font-size: 30px;
-            color: black ;
+            text-align: center;
             text-decoration: none;
+            padding: 20px;
         }
     </style>
     <a href="login">login Page</a>
     <br>
-    <a href="register">Register Page</a>
+    <a style="padding-top: 12px" href="register">Register Page</a>
 </dov>
