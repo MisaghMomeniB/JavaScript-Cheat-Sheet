@@ -56,7 +56,7 @@
                     <span class="absolute left-3 top-2 text-gray-500">ریال</span>
                 </div>
                 {{-- Rial Change to Toman --}}
-                <p id="toman-display" class="text-sm text-green-600 mt-2" >تومان : --</p>
+                <p id="toman-display" class="text-sm text-green-600 mt-2" ></p>
             </div>
 
             <!-- توضیحات -->
@@ -102,7 +102,7 @@
     </script>
 @endif
 
-<script>
+{{-- <script>
     document.addEventListener("DOMContentLoaded", function () {
         const priceInput = document.getElementById("price");
         const tomanDisplay = document.getElementById("toman-display");
@@ -111,11 +111,67 @@
             const rial = parseInt(priceInput.value, 10);
             if (!isNaN(rial)) {
                 const toman = rial / 10;
-                tomanDisplay.textContent = "تومان: " + toman.toLocaleString() + " تومان";
+                tomanDisplay.textContent = "" + toman.toLocaleString() + " تومان";
             } else {
                 tomanDisplay.textContent = "تومان: --";
             }
         });
+    });
+</script> --}}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const priceInput = document.getElementById("price");
+        const tomanDisplay = document.getElementById("toman-display");
+
+        priceInput.addEventListener("input", function () {
+            const rial = parseInt(priceInput.value, 10);
+            if (!isNaN(rial)) {
+                const toman = Math.floor(rial / 10);
+                const tomanText = numberToPersianWords(toman);
+                tomanDisplay.textContent = "" + tomanText + " تومان";
+            } else {
+                tomanDisplay.textContent = "";
+            }
+        });
+
+        // تابع تبدیل عدد به حروف فارسی
+        function numberToPersianWords(num) {
+            const yekan = ["", "یک", "دو", "سه", "چهار", "پنج", "شش", "هفت", "هشت", "نه"];
+            const dahgan = ["", "ده", "بیست", "سی", "چهل", "پنجاه", "شصت", "هفتاد", "هشتاد", "نود"];
+            const dah = ["ده", "یازده", "دوازده", "سیزده", "چهارده", "پانزده", "شانزده", "هفده", "هجده", "نوزده"];
+            const sadgan = ["", "صد", "دویست", "سیصد", "چهارصد", "پانصد", "ششصد", "هفتصد", "هشتصد", "نهصد"];
+            const basex = ["", "هزار", "میلیون", "میلیارد"];
+
+            if (num === 0) return "صفر";
+
+            const parts = [];
+            let section = 0;
+
+            while (num > 0) {
+                let part = num % 1000;
+                if (part !== 0) {
+                    let str = "";
+                    let s = Math.floor(part / 100);
+                    let d = Math.floor((part % 100) / 10);
+                    let y = part % 10;
+
+                    if (s > 0) str += sadgan[s] + " ";
+                    if (d === 1 && y > 0) {
+                        str += (s > 0 ? "و " : "") + dah[y] + " ";
+                    } else {
+                        if (d > 0) str += (s > 0 ? "و " : "") + dahgan[d] + " ";
+                        if (y > 0) str += ((s > 0 || d > 0) ? "و " : "") + yekan[y] + " ";
+                    }
+
+                    parts.unshift(str.trim() + (basex[section] ? " " + basex[section] : ""));
+                }
+                section++;
+                num = Math.floor(num / 1000);
+            }
+
+            return parts.join(" و ");
+        }
     });
 </script>
 
