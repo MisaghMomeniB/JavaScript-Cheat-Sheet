@@ -55,6 +55,8 @@
                            class="form-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 pl-12" />
                     <span class="absolute left-3 top-2 text-gray-500">ریال</span>
                 </div>
+                {{-- Rial Change to Toman --}}
+                <p id="toman-display" class="text-sm text-green-600 mt-2" >تومان : --</p>
             </div>
 
             <!-- توضیحات -->
@@ -99,6 +101,24 @@
         });
     </script>
 @endif
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const priceInput = document.getElementById("price");
+        const tomanDisplay = document.getElementById("toman-display");
+
+        priceInput.addEventListener("input", function () {
+            const rial = parseInt(priceInput.value, 10);
+            if (!isNaN(rial)) {
+                const toman = rial / 10;
+                tomanDisplay.textContent = "تومان: " + toman.toLocaleString() + " تومان";
+            } else {
+                tomanDisplay.textContent = "تومان: --";
+            }
+        });
+    });
+</script>
+
 
 </body>
 </html>
