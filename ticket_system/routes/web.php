@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Httop\Controller\TicketController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
