@@ -19,3 +19,17 @@ var x = 10;         // متغیر قدیمی، قابل تغییر
 let y = 20;         // متغیر مدرن، قابل تغییر
 const z = 30;       // متغیر ثابت (قابل تغییر نیست)
 ```
+
+### ✅ ۴. انواع داده‌ها
+
+```js
+let name = "Ali";           // string
+let age = 25;               // number
+let isOnline = true;        // boolean
+let address = null;         // null
+let phone;                  // undefined
+let person = { name: "Ali", age: 25 }; // object
+let numbers = [1, 2, 3];    // array
+```
+
+---
