@@ -102,3 +102,30 @@ for (let key in obj) {
   console.log(key, obj[key]);
 }
 ```
+
+---
+
+## 🧰 بخش ۴: توابع
+
+### ✅ ۱. تابع معمولی
+
+```js
+function greet(name) {
+  return "Hello, " + name;
+}
+console.log(greet("Ali"));
+```
+
+### ✅ ۲. تابع فلش (Arrow Function)
+
+```js
+const greet = (name) => "Hello, " + name;
+```
+
+### ✅ ۳. پارامتر پیش‌فرض
+
+```js
+function greet(name = "Guest") {
+  console.log("Hi, " + name);
+}
+```
