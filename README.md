@@ -73,3 +73,32 @@ for (let i = 0; i < 5; i++) {
   console.log(i);
 }
 ```
+
+### ✅ ۲. while / do-while
+
+```js
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+
+do {
+  console.log(i);
+  i++;
+} while (i < 10);
+```
+
+### ✅ ۳. for...of و for...in
+
+```js
+let arr = [10, 20, 30];
+for (let value of arr) {
+  console.log(value);
+}
+
+let obj = { a: 1, b: 2 };
+for (let key in obj) {
+  console.log(key, obj[key]);
+}
+```
