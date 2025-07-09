@@ -1,53 +1,81 @@
-## 🧱 بخش ۱: مفاهیم پایه
+# 🟨 JavaScript Cheat Sheet – فارسی + English (Beginner Level)
+
+---
+
+## 🧱 بخش ۱: مفاهیم پایه – Basics
 
 ### ✅ ۱. معرفی JavaScript
 
-* زبان اسکریپت‌نویسی برای صفحات وب
-* در مرورگر اجرا می‌شود
-* حالا با Node.js هم در سرور استفاده می‌شود
+**فارسی**: جاوااسکریپت یک زبان برنامه‌نویسی اسکریپتی است که معمولاً در مرورگرها برای ایجاد تعامل با کاربر استفاده می‌شود.
+**English**: JavaScript is a scripting language commonly used in browsers to create interactive web pages.
 
-### ✅ ۲. چاپ کردن در کنسول
+---
+
+### ✅ ۲. چاپ در کنسول
+
+**فارسی**: برای نمایش خروجی در کنسول مرورگر استفاده می‌شود.
+**English**: Used to print output to the browser’s developer console.
 
 ```js
 console.log("Hello, world!");
 ```
 
-### ✅ ۳. متغیرها
+---
+
+### ✅ ۳. تعریف متغیر
+
+**فارسی**: برای نگهداری داده‌ها از متغیر استفاده می‌کنیم.
+**English**: Variables are used to store data.
 
 ```js
-var x = 10;         // متغیر قدیمی، قابل تغییر
-let y = 20;         // متغیر مدرن، قابل تغییر
-const z = 30;       // متغیر ثابت (قابل تغییر نیست)
-```
-
-### ✅ ۴. انواع داده‌ها
-
-```js
-let name = "Ali";           // string
-let age = 25;               // number
-let isOnline = true;        // boolean
-let address = null;         // null
-let phone;                  // undefined
-let person = { name: "Ali", age: 25 }; // object
-let numbers = [1, 2, 3];    // array
+var x = 10;     // قدیمی | old style
+let y = 20;     // مدرن و قابل تغییر | modern and mutable
+const z = 30;   // مقدار ثابت | constant value
 ```
 
 ---
 
-## 🔁 بخش ۲: عملگرها و شرط‌ها
+### ✅ ۴. انواع داده (Data Types)
 
-### ✅ ۱. عملگرهای پایه
+**فارسی**: جاوااسکریپت چند نوع داده‌ی اصلی دارد.
+**English**: JavaScript has several basic data types.
 
 ```js
-// ریاضی
-+  -  *  /  %
-// مقایسه
+let name = "Ali";            // string - رشته
+let age = 25;                // number - عدد
+let isOnline = true;         // boolean - بولی (درست/نادرست)
+let address = null;          // null - تهی
+let phone;                   // undefined - تعریف نشده
+let person = { name: "Ali", age: 25 }; // object - شیء
+let numbers = [1, 2, 3];     // array - آرایه
+```
+
+---
+
+## 🔁 بخش ۲: عملگرها و شرط‌ها – Operators & Conditions
+
+### ✅ عملگرهای ریاضی و منطقی
+
+**فارسی**: برای انجام عملیات ریاضی یا مقایسه‌ای
+**English**: Used for math operations or comparisons.
+
+```js
+// Arithmetic
++  -  *  /  % 
+
+// Comparison
 ==  ===  !=  !==  >  <  >=  <=
-// منطقی
+
+// Logical
 &&  ||  !
 ```
 
-### ✅ ۲. شرط‌ها
+---
+
+### ✅ شرط‌ها (if / else)
+
+**فارسی**: برای اجرای دستورات بر اساس شرایط خاص
+**English**: Used to control the flow based on conditions.
 
 ```js
 if (age > 18) {
@@ -57,16 +85,22 @@ if (age > 18) {
 } else {
   console.log("Child");
 }
+```
 
-// شرط کوتاه: ternary operator
+#### شرط کوتاه (Ternary Operator)
+
+```js
 let msg = age > 18 ? "Adult" : "Minor";
 ```
 
 ---
 
-## 🔁 بخش ۳: حلقه‌ها (Loops)
+## 🔄 بخش ۳: حلقه‌ها – Loops
 
-### ✅ ۱. for loop
+### ✅ حلقه for
+
+**فارسی**: تکرار یک بلوک کد تا زمانی خاص
+**English**: Repeats a block of code for a certain number of times.
 
 ```js
 for (let i = 0; i < 5; i++) {
@@ -74,7 +108,12 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-### ✅ ۲. while / do-while
+---
+
+### ✅ حلقه while / do...while
+
+**فارسی**: تا زمانی که شرط برقرار است، اجرا می‌شود
+**English**: Executes as long as a condition is true.
 
 ```js
 let i = 0;
@@ -89,7 +128,12 @@ do {
 } while (i < 10);
 ```
 
-### ✅ ۳. for...of و for...in
+---
+
+### ✅ حلقه‌های for...of و for...in
+
+**فارسی**: for...of برای آرایه، for...in برای شیء
+**English**: `for...of` is for arrays, `for...in` is for objects.
 
 ```js
 let arr = [10, 20, 30];
@@ -105,9 +149,12 @@ for (let key in obj) {
 
 ---
 
-## 🧰 بخش ۴: توابع
+## 🧰 بخش ۴: توابع – Functions
 
-### ✅ ۱. تابع معمولی
+### ✅ تعریف تابع
+
+**فارسی**: مجموعه‌ای از کدها با هدف خاص
+**English**: A reusable block of code that performs a task.
 
 ```js
 function greet(name) {
@@ -116,16 +163,78 @@ function greet(name) {
 console.log(greet("Ali"));
 ```
 
-### ✅ ۲. تابع فلش (Arrow Function)
+---
+
+### ✅ تابع فلش (Arrow Function)
+
+**فارسی**: شکل کوتاه‌تری از تعریف تابع
+**English**: A shorter syntax for writing functions.
 
 ```js
 const greet = (name) => "Hello, " + name;
 ```
 
-### ✅ ۳. پارامتر پیش‌فرض
+---
+
+### ✅ پارامتر پیش‌فرض
+
+**فارسی**: مقدار پیش‌فرض در صورت نبود ورودی
+**English**: Default parameter used when argument is not passed.
 
 ```js
 function greet(name = "Guest") {
   console.log("Hi, " + name);
 }
+```
+
+---
+
+## 🧱 بخش ۵: اشیاء (Objects) و آرایه‌ها (Arrays)
+
+### ✅ شیء (Object)
+
+**فارسی**: ساختار داده‌ای با کلید و مقدار
+**English**: A data structure that stores key-value pairs.
+
+```js
+let person = {
+  name: "Sara",
+  age: 30,
+  greet: function() {
+    console.log("Hi, I'm " + this.name);
+  }
+};
+
+person.greet();
+```
+
+---
+
+### ✅ آرایه و متدهای آن
+
+**فارسی**: لیستی از داده‌ها با متدهای مختلف
+**English**: A list of data with various helper methods.
+
+```js
+let nums = [1, 2, 3, 4];
+nums.push(5);       // اضافه کردن – add
+nums.pop();         // حذف آخرین – remove last
+nums.shift();       // حذف اول – remove first
+nums.unshift(0);    // اضافه اول – add to start
+
+// پیمایش – looping
+nums.forEach((num) => console.log(num));
+```
+
+---
+
+## 🔄 بخش ۶: توابع آرایه پیشرفته – Advanced Array Methods
+
+```js
+let nums = [1, 2, 3, 4, 5];
+
+let doubled = nums.map(n => n * 2);         // اعمال بر روی همه – map
+let evens = nums.filter(n => n % 2 === 0);  // فیلتر کردن – filter
+let sum = nums.reduce((acc, val) => acc + val, 0);  // جمع کردن – reduce
+let found = nums.find(n => n > 3);          // اولین مورد – find
 ```
