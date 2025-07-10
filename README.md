@@ -238,3 +238,98 @@ let evens = nums.filter(n => n % 2 === 0);  // فیلتر کردن – filter
 let sum = nums.reduce((acc, val) => acc + val, 0);  // جمع کردن – reduce
 let found = nums.find(n => n > 3);          // اولین مورد – find
 ```
+
+---
+
+## 📦 بخش ۷: کلاس‌ها و شی‌گرایی – Classes & OOP
+
+**فارسی**: کلاس‌ها برای ساخت اشیاء با ساختار و رفتار مشخص
+**English**: Classes help create structured objects with behavior.
+
+```js
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hi, I'm ${this.name}`);
+  }
+}
+
+let p1 = new Person("Ali", 28);
+p1.greet();
+```
+
+---
+
+## 🌐 بخش ۸: DOM و رویدادها – DOM & Events
+
+### ✅ تعامل با HTML
+
+**فارسی**: برای تغییر عناصر HTML با JavaScript
+**English**: Manipulating HTML elements with JavaScript.
+
+```html
+<button onclick="sayHi()">Click Me</button>
+<script>
+function sayHi() {
+  alert("Hello!");
+}
+</script>
+```
+
+```js
+document.getElementById("myId").textContent = "New Text";
+document.querySelector(".myClass").style.color = "red";
+```
+
+---
+
+### ✅ اضافه کردن رویداد (Event Listener)
+
+```js
+document.querySelector("button").addEventListener("click", () => {
+  alert("Clicked!");
+});
+```
+
+---
+
+## 🧪 بخش ۹: مقداردهی پیش‌فرض و منطقی – Fallbacks & Nullish
+
+```js
+let name = null;
+
+// استفاده از ?? برای مقدار پیش‌فرض در null
+console.log(name ?? "Guest");
+
+// استفاده از || برای مقدارهای falsy
+console.log(name || "Guest");
+```
+
+---
+
+## 🕒 بخش ۱۰: Promise و Async/Await
+
+**فارسی**: برای کار با عملیات غیرهم‌زمان (مثل API ها)
+**English**: Used for handling asynchronous operations like API calls.
+
+```js
+let p = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done!"), 1000);
+});
+
+p.then(result => console.log(result));
+```
+
+### ✅ async / await
+
+```js
+async function getData() {
+  let res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  let data = await res.json();
+  console.log(data);
+}
+```
