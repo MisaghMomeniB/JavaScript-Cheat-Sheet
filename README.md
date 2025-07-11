@@ -333,3 +333,48 @@ async function getData() {
   console.log(data);
 }
 ```
+---
+
+# 🧠 JavaScript Cheat Sheet – بخش پیشرفته (Advanced)
+
+**زبان: فارسی + English**
+**سطح: متوسط تا پیشرفته**
+
+---
+
+## 📦 بخش ۱: ماژول‌ها – Modules
+
+### ✅ معرفی ماژول‌ها
+
+**فارسی**: ماژول‌ها به شما اجازه می‌دهند کد را به فایل‌های جداگانه تقسیم کرده و آن‌ها را در صورت نیاز import/export کنید.
+**English**: Modules allow you to split code into separate files and reuse them via `import` and `export`.
+
+### 🔹 export کردن در فایل A.js
+
+```js
+export const name = "Ali";
+
+export function greet() {
+  console.log("Hello");
+}
+```
+
+### 🔹 import کردن در فایل B.js
+
+```js
+import { name, greet } from './A.js';
+greet();
+```
+
+### 🔹 export پیش‌فرض
+
+```js
+export default function () {
+  console.log("Default export");
+}
+
+// import کردنش
+import myFunc from './A.js';
+```
+
+---
