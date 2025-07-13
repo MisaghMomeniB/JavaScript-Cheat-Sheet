@@ -28,9 +28,9 @@ console.log("Hello, world!");
 **English**: Variables are used to store data.
 
 ```js
-var x = 10;     // قدیمی | old style
-let y = 20;     // مدرن و قابل تغییر | modern and mutable
-const z = 30;   // مقدار ثابت | constant value
+var x = 10; // قدیمی | old style
+let y = 20; // مدرن و قابل تغییر | modern and mutable
+const z = 30; // مقدار ثابت | constant value
 ```
 
 ---
@@ -41,13 +41,13 @@ const z = 30;   // مقدار ثابت | constant value
 **English**: JavaScript has several basic data types.
 
 ```js
-let name = "Ali";            // string - رشته
-let age = 25;                // number - عدد
-let isOnline = true;         // boolean - بولی (درست/نادرست)
-let address = null;          // null - تهی
-let phone;                   // undefined - تعریف نشده
+let name = "Ali"; // string - رشته
+let age = 25; // number - عدد
+let isOnline = true; // boolean - بولی (درست/نادرست)
+let address = null; // null - تهی
+let phone; // undefined - تعریف نشده
 let person = { name: "Ali", age: 25 }; // object - شیء
-let numbers = [1, 2, 3];     // array - آرایه
+let numbers = [1, 2, 3]; // array - آرایه
 ```
 
 ---
@@ -61,7 +61,7 @@ let numbers = [1, 2, 3];     // array - آرایه
 
 ```js
 // Arithmetic
-+  -  *  /  % 
++  -  *  /  %
 
 // Comparison
 ==  ===  !=  !==  >  <  >=  <=
@@ -200,9 +200,9 @@ function greet(name = "Guest") {
 let person = {
   name: "Sara",
   age: 30,
-  greet: function() {
+  greet: function () {
     console.log("Hi, I'm " + this.name);
-  }
+  },
 };
 
 person.greet();
@@ -217,10 +217,10 @@ person.greet();
 
 ```js
 let nums = [1, 2, 3, 4];
-nums.push(5);       // اضافه کردن – add
-nums.pop();         // حذف آخرین – remove last
-nums.shift();       // حذف اول – remove first
-nums.unshift(0);    // اضافه اول – add to start
+nums.push(5); // اضافه کردن – add
+nums.pop(); // حذف آخرین – remove last
+nums.shift(); // حذف اول – remove first
+nums.unshift(0); // اضافه اول – add to start
 
 // پیمایش – looping
 nums.forEach((num) => console.log(num));
@@ -233,10 +233,15 @@ nums.forEach((num) => console.log(num));
 ```js
 let nums = [1, 2, 3, 4, 5];
 
-let doubled = nums.map(n => n * 2);         // اعمال بر روی همه – map
-let evens = nums.filter(n => n % 2 === 0);  // فیلتر کردن – filter
-let sum = nums.reduce((acc, val) => acc + val, 0);  // جمع کردن – reduce
-let found = nums.find(n => n > 3);          // اولین مورد – find
+let doubled = nums.map((n) => n * 2); // اعمال بر روی همه – map
+let evens = nums.filter((n) => n % 2 === 0); // فیلتر کردن – filter
+let sum = nums.reduce((acc, val) => acc + val, 0); // جمع کردن – reduce
+let found = nums.find((n) => n > 3); // اولین مورد – find
+let hasEven = nums.some((n) => n % 2 === 0); // حداقل یکی برقرار است – some
+let allPositive = nums.every((n) => n > 0); // همه برقرارند – every
+let hasThree = nums.includes(3); // وجود مقدار – includes
+let removed = nums.splice(1, 2); // حذف یا اضافه – splice
+let entries = nums.entries(); // اندیس و مقدار – entries
 ```
 
 ---
@@ -274,9 +279,9 @@ p1.greet();
 ```html
 <button onclick="sayHi()">Click Me</button>
 <script>
-function sayHi() {
-  alert("Hello!");
-}
+  function sayHi() {
+    alert("Hello!");
+  }
 </script>
 ```
 
@@ -321,7 +326,7 @@ let p = new Promise((resolve, reject) => {
   setTimeout(() => resolve("Done!"), 1000);
 });
 
-p.then(result => console.log(result));
+p.then((result) => console.log(result));
 ```
 
 ### ✅ async / await
@@ -333,6 +338,7 @@ async function getData() {
   console.log(data);
 }
 ```
+
 ---
 
 # 🧠 JavaScript Cheat Sheet – بخش پیشرفته (Advanced)
@@ -362,7 +368,7 @@ export function greet() {
 ### 🔹 import کردن در فایل B.js
 
 ```js
-import { name, greet } from './A.js';
+import { name, greet } from "./A.js";
 greet();
 ```
 
@@ -374,7 +380,7 @@ export default function () {
 }
 
 // import کردنش
-import myFunc from './A.js';
+import myFunc from "./A.js";
 ```
 
 ---
