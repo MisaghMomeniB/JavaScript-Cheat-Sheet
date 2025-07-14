@@ -1,63 +1,63 @@
-# 🟨 JavaScript Cheat Sheet – فارسی + English (Beginner Level)
+# 📘 JavaScript Cheat Sheet
+
+🔤 زبان: فارسی + English
+👶 سطح: مبتدی تا پیشرفته (Beginner to Advanced)
+🌐 قابل استفاده برای فرانت‌اند، بک‌اند و فول‌استک
 
 ---
 
 ## 🧱 بخش ۱: مفاهیم پایه – Basics
 
-### ✅ ۱. معرفی JavaScript
+### ✅ معرفی JavaScript
 
-**فارسی**: جاوااسکریپت یک زبان برنامه‌نویسی اسکریپتی است که معمولاً در مرورگرها برای ایجاد تعامل با کاربر استفاده می‌شود.
-**English**: JavaScript is a scripting language commonly used in browsers to create interactive web pages.
+**🇫🇮 فارسی**: جاوااسکریپت یک زبان اسکریپتی قدرتمند برای تعامل با صفحات وب و ساخت اپلیکیشن‌های تحت وب است.
+**🇺🇸 English**: JavaScript is a powerful scripting language used to create dynamic and interactive web content.
 
 ---
 
-### ✅ ۲. چاپ در کنسول
-
-**فارسی**: برای نمایش خروجی در کنسول مرورگر استفاده می‌شود.
-**English**: Used to print output to the browser’s developer console.
+### 🔤 چاپ خروجی – Console Output
 
 ```js
 console.log("Hello, world!");
 ```
 
+🗣️
+**🇫🇮 فارسی**: برای نمایش خروجی در کنسول مرورگر استفاده می‌شود.
+**🇺🇸 English**: Prints output to the browser's console.
+
 ---
 
-### ✅ ۳. تعریف متغیر
-
-**فارسی**: برای نگهداری داده‌ها از متغیر استفاده می‌کنیم.
-**English**: Variables are used to store data.
+### 📦 متغیرها – Variables
 
 ```js
-var x = 10;     // قدیمی | old style
-let y = 20;     // مدرن و قابل تغییر | modern and mutable
-const z = 30;   // مقدار ثابت | constant value
+var x = 10;
+let y = 20;
+const z = 30;
 ```
 
+🧠
+**🇫🇮 فارسی**: برای ذخیره داده‌ها در حافظه استفاده می‌شود.
+**🇺🇸 English**: Used to store data in memory.
+
 ---
 
-### ✅ ۴. انواع داده (Data Types)
-
-**فارسی**: جاوااسکریپت چند نوع داده‌ی اصلی دارد.
-**English**: JavaScript has several basic data types.
+### 🧬 انواع داده – Data Types
 
 ```js
-let name = "Ali";            // string - رشته
-let age = 25;                // number - عدد
-let isOnline = true;         // boolean - بولی (درست/نادرست)
-let address = null;          // null - تهی
-let phone;                   // undefined - تعریف نشده
-let person = { name: "Ali", age: 25 }; // object - شیء
-let numbers = [1, 2, 3];     // array - آرایه
+let name = "Ali";         // String
+let age = 25;             // Number
+let isOnline = true;      // Boolean
+let address = null;       // Null
+let phone;                // Undefined
+let person = { name: "Ali", age: 25 };  // Object
+let numbers = [1, 2, 3];  // Array
 ```
 
 ---
 
 ## 🔁 بخش ۲: عملگرها و شرط‌ها – Operators & Conditions
 
-### ✅ عملگرهای ریاضی و منطقی
-
-**فارسی**: برای انجام عملیات ریاضی یا مقایسه‌ای
-**English**: Used for math operations or comparisons.
+### ➕ عملگرها – Operators
 
 ```js
 // Arithmetic
@@ -72,78 +72,47 @@ let numbers = [1, 2, 3];     // array - آرایه
 
 ---
 
-### ✅ شرط‌ها (if / else)
-
-**فارسی**: برای اجرای دستورات بر اساس شرایط خاص
-**English**: Used to control the flow based on conditions.
+### ❓ شرط‌ها – Conditions
 
 ```js
 if (age > 18) {
   console.log("Adult");
-} else if (age > 12) {
-  console.log("Teenager");
 } else {
-  console.log("Child");
+  console.log("Minor");
 }
-```
 
-#### شرط کوتاه (Ternary Operator)
-
-```js
-let msg = age > 18 ? "Adult" : "Minor";
+let result = age > 18 ? "Adult" : "Minor"; // Ternary
 ```
 
 ---
 
 ## 🔄 بخش ۳: حلقه‌ها – Loops
 
-### ✅ حلقه for
-
-**فارسی**: تکرار یک بلوک کد تا زمانی خاص
-**English**: Repeats a block of code for a certain number of times.
-
 ```js
+// For loop
 for (let i = 0; i < 5; i++) {
   console.log(i);
 }
-```
 
----
-
-### ✅ حلقه while / do...while
-
-**فارسی**: تا زمانی که شرط برقرار است، اجرا می‌شود
-**English**: Executes as long as a condition is true.
-
-```js
+// While loop
 let i = 0;
 while (i < 5) {
-  console.log(i);
-  i++;
+  console.log(i++);
 }
 
+// Do...while
 do {
-  console.log(i);
-  i++;
+  console.log(i++);
 } while (i < 10);
-```
 
----
-
-### ✅ حلقه‌های for...of و for...in
-
-**فارسی**: for...of برای آرایه، for...in برای شیء
-**English**: `for...of` is for arrays, `for...in` is for objects.
-
-```js
-let arr = [10, 20, 30];
-for (let value of arr) {
-  console.log(value);
+// For...of
+for (let item of [10, 20, 30]) {
+  console.log(item);
 }
 
-let obj = { a: 1, b: 2 };
-for (let key in obj) {
-  console.log(key, obj[key]);
+// For...in
+for (let key in {a: 1, b: 2}) {
+  console.log(key);
 }
 ```
 
@@ -151,128 +120,156 @@ for (let key in obj) {
 
 ## 🧰 بخش ۴: توابع – Functions
 
-### ✅ تعریف تابع
-
-**فارسی**: مجموعه‌ای از کدها با هدف خاص
-**English**: A reusable block of code that performs a task.
-
 ```js
 function greet(name) {
   return "Hello, " + name;
 }
-console.log(greet("Ali"));
-```
 
----
+const greet2 = (name) => "Hi, " + name;
 
-### ✅ تابع فلش (Arrow Function)
-
-**فارسی**: شکل کوتاه‌تری از تعریف تابع
-**English**: A shorter syntax for writing functions.
-
-```js
-const greet = (name) => "Hello, " + name;
-```
-
----
-
-### ✅ پارامتر پیش‌فرض
-
-**فارسی**: مقدار پیش‌فرض در صورت نبود ورودی
-**English**: Default parameter used when argument is not passed.
-
-```js
-function greet(name = "Guest") {
-  console.log("Hi, " + name);
+function welcome(name = "Guest") {
+  console.log("Welcome, " + name);
 }
 ```
 
 ---
 
-## 🧱 بخش ۵: اشیاء (Objects) و آرایه‌ها (Arrays)
-
-### ✅ شیء (Object)
-
-**فارسی**: ساختار داده‌ای با کلید و مقدار
-**English**: A data structure that stores key-value pairs.
+## 📁 بخش ۵: اشیاء و آرایه‌ها – Objects & Arrays
 
 ```js
 let person = {
   name: "Sara",
   age: 30,
-  greet: function() {
+  greet() {
     console.log("Hi, I'm " + this.name);
   }
 };
 
-person.greet();
+let nums = [1, 2, 3];
+nums.push(4);      // Add
+nums.pop();        // Remove last
+nums.shift();      // Remove first
+nums.unshift(0);   // Add to start
+
+nums.forEach(n => console.log(n));
 ```
 
 ---
 
-### ✅ آرایه و متدهای آن
-
-**فارسی**: لیستی از داده‌ها با متدهای مختلف
-**English**: A list of data with various helper methods.
+## 🧪 بخش ۶: متدهای آرایه – Advanced Array Methods
 
 ```js
 let nums = [1, 2, 3, 4];
-nums.push(5);       // اضافه کردن – add
-nums.pop();         // حذف آخرین – remove last
-nums.shift();       // حذف اول – remove first
-nums.unshift(0);    // اضافه اول – add to start
 
-// پیمایش – looping
-nums.forEach((num) => console.log(num));
+nums.map(n => n * 2);            // [2, 4, 6, 8]
+nums.filter(n => n % 2 === 0);   // [2, 4]
+nums.reduce((a, b) => a + b);    // 10
+nums.find(n => n > 2);           // 3
 ```
 
 ---
 
-## 🔄 بخش ۶: توابع آرایه پیشرفته – Advanced Array Methods
+## 🧠 بخش ۷: Destructuring – واپاشی
 
 ```js
-let nums = [1, 2, 3, 4, 5];
-
-let doubled = nums.map(n => n * 2);         // اعمال بر روی همه – map
-let evens = nums.filter(n => n % 2 === 0);  // فیلتر کردن – filter
-let sum = nums.reduce((acc, val) => acc + val, 0);  // جمع کردن – reduce
-let found = nums.find(n => n > 3);          // اولین مورد – find
+const { name, age } = { name: "Ali", age: 30 };
+const [a, b] = [10, 20];
 ```
 
 ---
 
-## 📦 بخش ۷: کلاس‌ها و شی‌گرایی – Classes & OOP
+## 🧩 بخش ۸: Spread و Rest
 
-**فارسی**: کلاس‌ها برای ساخت اشیاء با ساختار و رفتار مشخص
-**English**: Classes help create structured objects with behavior.
+```js
+let arr = [1, 2, 3];
+let newArr = [...arr, 4];  // Spread
+
+function sum(...nums) {    // Rest
+  return nums.reduce((a, b) => a + b, 0);
+}
+```
+
+---
+
+## 🔁 بخش ۹: توابع بازگشتی – Recursion
+
+```js
+function factorial(n) {
+  if (n === 1) return 1;
+  return n * factorial(n - 1);
+}
+```
+
+---
+
+## 🛑 بخش ۱۰: مدیریت خطا – Error Handling
+
+```js
+try {
+  risky();
+} catch (error) {
+  console.error(error.message);
+} finally {
+  console.log("Done");
+}
+```
+
+---
+
+## 📦 بخش ۱۱: ماژول‌ها – Modules
+
+```js
+// A.js
+export const name = "Ali";
+export default function hello() {
+  console.log("Hello");
+}
+
+// B.js
+import hello, { name } from './A.js';
+hello();
+```
+
+---
+
+## 🧱 بخش ۱۲: کلاس‌ها و شی‌گرایی – Classes & OOP
 
 ```js
 class Person {
-  constructor(name, age) {
+  constructor(name) {
     this.name = name;
-    this.age = age;
   }
 
-  greet() {
-    console.log(`Hi, I'm ${this.name}`);
+  speak() {
+    console.log("Hi, I'm " + this.name);
   }
 }
 
-let p1 = new Person("Ali", 28);
-p1.greet();
+const p = new Person("Ali");
+p.speak();
 ```
 
 ---
 
-## 🌐 بخش ۸: DOM و رویدادها – DOM & Events
+## ⏱️ بخش ۱۳: Event Loop
 
-### ✅ تعامل با HTML
+```js
+console.log("Start");
 
-**فارسی**: برای تغییر عناصر HTML با JavaScript
-**English**: Manipulating HTML elements with JavaScript.
+setTimeout(() => {
+  console.log("Timeout");
+}, 0);
+
+console.log("End");
+// Output: Start -> End -> Timeout
+```
+
+---
+
+## 🌐 بخش ۱۴: تعامل با DOM – DOM Manipulation
 
 ```html
-<button onclick="sayHi()">Click Me</button>
+<button onclick="sayHi()">Click me</button>
 <script>
 function sayHi() {
   alert("Hello!");
@@ -281,100 +278,50 @@ function sayHi() {
 ```
 
 ```js
-document.getElementById("myId").textContent = "New Text";
-document.querySelector(".myClass").style.color = "red";
+document.getElementById("title").textContent = "New Title";
+document.querySelector("p").style.color = "red";
 ```
 
 ---
 
-### ✅ اضافه کردن رویداد (Event Listener)
+## 🧠 بخش ۱۵: Optional Chaining & Nullish Coalescing
 
 ```js
-document.querySelector("button").addEventListener("click", () => {
-  alert("Clicked!");
-});
-```
+const user = { profile: { name: "Sara" } };
+console.log(user?.profile?.name); // "Sara"
+console.log(user?.address?.city); // undefined
 
----
-
-## 🧪 بخش ۹: مقداردهی پیش‌فرض و منطقی – Fallbacks & Nullish
-
-```js
 let name = null;
-
-// استفاده از ?? برای مقدار پیش‌فرض در null
-console.log(name ?? "Guest");
-
-// استفاده از || برای مقدارهای falsy
-console.log(name || "Guest");
+console.log(name ?? "Guest"); // "Guest"
 ```
 
 ---
 
-## 🕒 بخش ۱۰: Promise و Async/Await
-
-**فارسی**: برای کار با عملیات غیرهم‌زمان (مثل API ها)
-**English**: Used for handling asynchronous operations like API calls.
+## 📡 بخش ۱۶: Promise و async/await
 
 ```js
-let p = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("Done!"), 1000);
+let promise = new Promise((resolve) => {
+  setTimeout(() => resolve("Done"), 1000);
 });
 
-p.then(result => console.log(result));
-```
+promise.then(result => console.log(result));
 
-### ✅ async / await
-
-```js
 async function getData() {
-  let res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  let res = await fetch("https://api.com/data");
   let data = await res.json();
   console.log(data);
 }
 ```
----
-
-# 🧠 JavaScript Cheat Sheet – بخش پیشرفته (Advanced)
-
-**زبان: فارسی + English**
-**سطح: متوسط تا پیشرفته**
 
 ---
 
-## 📦 بخش ۱: ماژول‌ها – Modules
-
-### ✅ معرفی ماژول‌ها
-
-**فارسی**: ماژول‌ها به شما اجازه می‌دهند کد را به فایل‌های جداگانه تقسیم کرده و آن‌ها را در صورت نیاز import/export کنید.
-**English**: Modules allow you to split code into separate files and reuse them via `import` and `export`.
-
-### 🔹 export کردن در فایل A.js
+## 🧰 بخش ۱۷: Set و Map
 
 ```js
-export const name = "Ali";
+let mySet = new Set([1, 2, 3]);
+mySet.add(4);
 
-export function greet() {
-  console.log("Hello");
-}
+let myMap = new Map();
+myMap.set("name", "Ali");
+console.log(myMap.get("name"));
 ```
-
-### 🔹 import کردن در فایل B.js
-
-```js
-import { name, greet } from './A.js';
-greet();
-```
-
-### 🔹 export پیش‌فرض
-
-```js
-export default function () {
-  console.log("Default export");
-}
-
-// import کردنش
-import myFunc from './A.js';
-```
-
----
