@@ -355,9 +355,11 @@ console.log(gen.next().value); // 3
 
 
 🇫🇮 فارسی: توابع مولد با استفاده از yield مقادیر رو به‌صورت مرحله‌ای تولید می‌کنن. این توابع برای کنترل جریان اجرا و پردازش داده‌های بزرگ مناسبن.🇺🇸 English: Generator functions produce values incrementally using yield, ideal for controlling execution flow and handling large datasets.
+```
 
 
 🔑 ۱۹. شناسه‌ها (Symbol)
+```js
 const sym = Symbol('id');
 const obj = {
   [sym]: 123
@@ -366,9 +368,10 @@ console.log(obj[sym]); // 123
 
 
 🇫🇮 فارسی: Symbol برای ایجاد شناسه‌های منحصربه‌فرد استفاده می‌شه که از تداخل نام ویژگی‌ها در اشیاء جلوگیری می‌کنه.🇺🇸 English: Symbol creates unique identifiers to prevent property name collisions in objects.
-
+```
 
 🛠️ ۲۰. Reflect و Proxy
+```js
 const target = {};
 const handler = {
   get(target, prop) {
@@ -380,9 +383,10 @@ console.log(proxy.anything); // ویژگی anything خوانده شد
 
 
 🇫🇮 فارسی: Proxy برای کنترل و سفارشی‌سازی رفتار اشیاء و Reflect برای اجرای عملیات استاندارد روی اشیاء استفاده می‌شه.🇺🇸 English: Proxy customizes object behavior, while Reflect performs standard object operations.
-
+```
 
 🌐 ۲۱. Web APIs
+```js
 // نمونه Fetch
 fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(res => res.json())
