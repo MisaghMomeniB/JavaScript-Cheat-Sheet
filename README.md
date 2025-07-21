@@ -300,17 +300,31 @@ console.log(name ?? "Guest"); // "Guest"
 ## 📡 بخش ۱۶: Promise و async/await
 
 ```js
-let promise = new Promise((resolve) => {
-  setTimeout(() => resolve("Done"), 1000);
+
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const success = true;
+    if(success) resolve("عملیات موفق بود!");
+    else reject("عملیات شکست خورد!");
+  }, 1000);
 });
 
-promise.then(result => console.log(result));
+myPromise
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
 
-async function getData() {
-  let res = await fetch("https://api.com/data");
-  let data = await res.json();
-  console.log(data);
+async function fetchData() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("خطا در دریافت داده:", error);
+  }
 }
+
+fetchData();
+
 ```
 
 ---
@@ -325,3 +339,58 @@ let myMap = new Map();
 myMap.set("name", "Ali");
 console.log(myMap.get("name"));
 ```
+
+
+## 🧰 بخش 18: Generic Function
+```js
+function* generator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const gen = generator();
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+
+
+
+```
+
+
+## 🧰 بخش 19:Symbol
+```js
+const sym = Symbol('id');
+const obj = {
+  [sym]: 123
+};
+console.log(obj[sym]); // 123
+
+```
+
+## 🧰 بخش 20:Reflect and Proxy
+```js
+const target = {};
+const handler = {
+  get(target, prop) {
+    return `ویژگی ${prop} خوانده شد`;
+  }
+};
+const proxy = new Proxy(target, handler);
+console.log(proxy.anything); // ویژگی anything خوانده شد
+
+
+```
+
+## 🧰 بخش 21: Web Apis
+```js
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error('خطا:', err));
+
+// LocalStorage
+localStorage.setItem('name', 'علی');
+console.log(localStorage.getItem('name')); // "علی"
+
