@@ -339,7 +339,7 @@ let myMap = new Map();
 myMap.set("name", "Ali");
 console.log(myMap.get("name"));
 ```
-🧰 بخش ۱۸: توابع مولد – Generator Functions
+🧰 ۱۸. توابع مولد – Generator Functions
 function* generator() {
   yield 1;
   yield 2;
@@ -351,18 +351,22 @@ console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
 
-🇫🇮 فارسی: توابع مولد برای تولید مقادیر به‌صورت مرحله‌ای و کنترل‌شده استفاده می‌شوند. از کلمه کلیدی yield برای توقف و ادامه اجرا استفاده می‌شود.🇺🇸 English: Generator functions produce values incrementally, using yield to pause and resume execution.
 
-🧰 بخش ۱۹: Symbol
+🇫🇮 فارسی: 🎯 توابع مولد با استفاده از yield مقادیر رو به‌صورت مرحله‌ای تولید می‌کنن و امکان کنترل جریان اجرا رو فراهم می‌کنن.🇺🇸 English: 🎯 Generator functions produce values step-by-step using yield, allowing controlled execution flow.
+
+
+🧰 ۱۹. Symbol
 const sym = Symbol('id');
 const obj = {
   [sym]: 123
 };
 console.log(obj[sym]); // 123
 
-🇫🇮 فارسی: Symbol برای ایجاد شناسه‌های منحصربه‌فرد استفاده می‌شود که از تداخل نام در اشیاء جلوگیری می‌کند.🇺🇸 English: Symbol creates unique identifiers to avoid property name collisions in objects.
 
-🧰 بخش ۲۰: Reflect و Proxy
+🇫🇮 فارسی: 🔑 Symbol شناسه‌های منحصربه‌فردی ایجاد می‌کنه که از تداخل نام ویژگی‌ها در اشیاء جلوگیری می‌کنه.🇺🇸 English: 🔑 Symbol creates unique identifiers to prevent property name conflicts in objects.
+
+
+🧰 ۲۰. Reflect و Proxy
 const target = {};
 const handler = {
   get(target, prop) {
@@ -372,17 +376,20 @@ const handler = {
 const proxy = new Proxy(target, handler);
 console.log(proxy.anything); // ویژگی anything خوانده شد
 
-🇫🇮 فارسی: Proxy برای کنترل رفتار اشیاء و Reflect برای انجام عملیات استاندارد روی اشیاء استفاده می‌شود.🇺🇸 English: Proxy controls object behavior, and Reflect performs standard operations on objects.
 
-🧰 بخش ۲۱: Web APIs
+🇫🇮 فارسی: 🛠️ Proxy رفتار اشیاء رو کنترل می‌کنه و Reflect عملیات استاندارد رو روی اشیاء انجام می‌ده.🇺🇸 English: 🛠️ Proxy controls object behavior, while Reflect performs standard object operations.
+
+
+🧰 ۲۱. Web APIs
 // نمونه Fetch
 fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(res => res.json())
   .then(data => console.log(data))
-  .catch(err => console.error("خطا:", err));
+  .catch(err => console.error('خطا:', err));
 
 // LocalStorage
 localStorage.setItem('name', 'علی');
 console.log(localStorage.getItem('name')); // "علی"
 
-🇫🇮 فارسی: Web APIs برای تعامل با قابلیت‌های مرورگر مانند درخواست‌های شبکه (fetch) و ذخیره‌سازی محلی (localStorage) استفاده می‌شوند.🇺🇸 English: Web APIs enable interaction with browser features like network requests (fetch) and local storage (localStorage).
+
+🇫🇮 فارسی: 🌐 Web APIs امکان تعامل با قابلیت‌های مرورگر مثل درخواست‌های شبکه (fetch) و ذخیره‌سازی محلی (localStorage) رو فراهم می‌کنن.🇺🇸 English: 🌐 Web APIs enable interaction with browser features like network requests (fetch) and local storage (localStorage).
