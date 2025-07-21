@@ -339,9 +339,10 @@ let myMap = new Map();
 myMap.set("name", "Ali");
 console.log(myMap.get("name"));
 ```
-```js
 
-🧰 بخش 18: Generator Functions
+
+## 🧰 بخش 18: Generic Function
+```js
 function* generator() {
   yield 1;
   yield 2;
@@ -354,11 +355,11 @@ console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
 
 
-🇫🇮 فارسی: توابع مولد با استفاده از yield مقادیر رو به‌صورت مرحله‌ای تولید می‌کنن. این توابع برای کنترل جریان اجرا و پردازش داده‌های بزرگ مناسبن.🇺🇸 English: Generator functions produce values incrementally using yield, ideal for controlling execution flow and handling large datasets.
+
 ```
 
 
-🧰 بخش 19: Symbols
+## 🧰 بخش 19:Symbol
 ```js
 const sym = Symbol('id');
 const obj = {
@@ -366,11 +367,9 @@ const obj = {
 };
 console.log(obj[sym]); // 123
 
-
-🇫🇮 فارسی: Symbol برای ایجاد شناسه‌های منحصربه‌فرد استفاده می‌شه که از تداخل نام ویژگی‌ها در اشیاء جلوگیری می‌کنه.🇺🇸 English: Symbol creates unique identifiers to prevent property name collisions in objects.
 ```
 
-🧰 بخش 20: Reflect and Proxy
+## 🧰 بخش 20:Reflect and Proxy
 ```js
 const target = {};
 const handler = {
@@ -382,12 +381,10 @@ const proxy = new Proxy(target, handler);
 console.log(proxy.anything); // ویژگی anything خوانده شد
 
 
-🇫🇮 فارسی: Proxy برای کنترل و سفارشی‌سازی رفتار اشیاء و Reflect برای اجرای عملیات استاندارد روی اشیاء استفاده می‌شه.🇺🇸 English: Proxy customizes object behavior, while Reflect performs standard object operations.
 ```
 
-🧰 بخش 21: Web Api
+## 🧰 بخش 21: Web Apis
 ```js
-// نمونه Fetch
 fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(res => res.json())
   .then(data => console.log(data))
@@ -397,5 +394,3 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 localStorage.setItem('name', 'علی');
 console.log(localStorage.getItem('name')); // "علی"
 
-
-🇫🇮 فارسی: Web APIs امکان تعامل با قابلیت‌های مرورگر مثل درخواست‌های شبکه (fetch) و ذخیره‌سازی محلی (localStorage) رو فراهم می‌کنن.🇺🇸 English: Web APIs enable interaction with browser features like network requests (fetch) and local storage (localStorage).
