@@ -339,7 +339,9 @@ let myMap = new Map();
 myMap.set("name", "Ali");
 console.log(myMap.get("name"));
 ```
-🧰 ۱۸. توابع مولد – Generator Functions
+```js
+
+🎯 ۱۸. توابع مولد – Generator Functions
 function* generator() {
   yield 1;
   yield 2;
@@ -352,10 +354,10 @@ console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
 
 
-🇫🇮 فارسی: 🎯 توابع مولد با استفاده از yield مقادیر رو به‌صورت مرحله‌ای تولید می‌کنن و امکان کنترل جریان اجرا رو فراهم می‌کنن.🇺🇸 English: 🎯 Generator functions produce values step-by-step using yield, allowing controlled execution flow.
+🇫🇮 فارسی: توابع مولد با استفاده از yield مقادیر رو به‌صورت مرحله‌ای تولید می‌کنن. این توابع برای کنترل جریان اجرا و پردازش داده‌های بزرگ مناسبن.🇺🇸 English: Generator functions produce values incrementally using yield, ideal for controlling execution flow and handling large datasets.
 
 
-🧰 ۱۹. Symbol
+🔑 ۱۹. شناسه‌ها (Symbol)
 const sym = Symbol('id');
 const obj = {
   [sym]: 123
@@ -363,10 +365,10 @@ const obj = {
 console.log(obj[sym]); // 123
 
 
-🇫🇮 فارسی: 🔑 Symbol شناسه‌های منحصربه‌فردی ایجاد می‌کنه که از تداخل نام ویژگی‌ها در اشیاء جلوگیری می‌کنه.🇺🇸 English: 🔑 Symbol creates unique identifiers to prevent property name conflicts in objects.
+🇫🇮 فارسی: Symbol برای ایجاد شناسه‌های منحصربه‌فرد استفاده می‌شه که از تداخل نام ویژگی‌ها در اشیاء جلوگیری می‌کنه.🇺🇸 English: Symbol creates unique identifiers to prevent property name collisions in objects.
 
 
-🧰 ۲۰. Reflect و Proxy
+🛠️ ۲۰. Reflect و Proxy
 const target = {};
 const handler = {
   get(target, prop) {
@@ -377,10 +379,10 @@ const proxy = new Proxy(target, handler);
 console.log(proxy.anything); // ویژگی anything خوانده شد
 
 
-🇫🇮 فارسی: 🛠️ Proxy رفتار اشیاء رو کنترل می‌کنه و Reflect عملیات استاندارد رو روی اشیاء انجام می‌ده.🇺🇸 English: 🛠️ Proxy controls object behavior, while Reflect performs standard object operations.
+🇫🇮 فارسی: Proxy برای کنترل و سفارشی‌سازی رفتار اشیاء و Reflect برای اجرای عملیات استاندارد روی اشیاء استفاده می‌شه.🇺🇸 English: Proxy customizes object behavior, while Reflect performs standard object operations.
 
 
-🧰 ۲۱. Web APIs
+🌐 ۲۱. Web APIs
 // نمونه Fetch
 fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(res => res.json())
@@ -392,4 +394,4 @@ localStorage.setItem('name', 'علی');
 console.log(localStorage.getItem('name')); // "علی"
 
 
-🇫🇮 فارسی: 🌐 Web APIs امکان تعامل با قابلیت‌های مرورگر مثل درخواست‌های شبکه (fetch) و ذخیره‌سازی محلی (localStorage) رو فراهم می‌کنن.🇺🇸 English: 🌐 Web APIs enable interaction with browser features like network requests (fetch) and local storage (localStorage).
+🇫🇮 فارسی: Web APIs امکان تعامل با قابلیت‌های مرورگر مثل درخواست‌های شبکه (fetch) و ذخیره‌سازی محلی (localStorage) رو فراهم می‌کنن.🇺🇸 English: Web APIs enable interaction with browser features like network requests (fetch) and local storage (localStorage).
